@@ -24,7 +24,7 @@ def is_valid_position(board, row, col, length, orientation):
                     return False
     return True
 
-# Placing ships
+
 def place_ship(board, length):
     while True:
         row = random.randint(0, 6)
@@ -37,7 +37,6 @@ def place_ship(board, length):
                 board[r][c] = str(length)
             break
 
-# Setting up the board
 def setup_board():
     board = [["." for _ in range(7)] for _ in range(7)]
     place_ship(board, 3)  
@@ -64,7 +63,7 @@ def shoot(board, display, row, col):
         display[row][col] = "O"
         return "miss"
 
-# Main function
+
 def play_game():
     clear_screen()
     name = input("Enter your name: ")
